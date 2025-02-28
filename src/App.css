@@ -1,0 +1,11 @@
+.wujie-app {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.wujie-app-navs {
+  width: 200px;
+}
+.wujie-app-container {
+  flex: 1;
+}

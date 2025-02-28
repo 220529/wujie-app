@@ -1,16 +1,18 @@
-import { useState } from "react";
-import "./App.css";
+// App.tsx
+import { BrowserRouter as Router, Route, Routes } from "react-router";
+import { navItems } from "./components/navItems";
+import LayoutWrapper from "./components/LayoutWrapper";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default () => {
   return (
-    <div className="card">
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
-    </div>
+    <Router>
+      <LayoutWrapper>
+        <Routes>
+          {navItems.map((item, index) => (
+            <Route key={index} path={item.path} element={item.component} />
+          ))}
+        </Routes>
+      </LayoutWrapper>
+    </Router>
   );
-}
-
-export default App;
+};
