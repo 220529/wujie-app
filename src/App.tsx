@@ -1,7 +1,7 @@
 // App.tsx
 import { BrowserRouter as Router, Route, Routes } from "react-router";
-import { navItems } from "./components/navItems";
-import LayoutWrapper from "./components/LayoutWrapper";
+import { navItems } from "@/components/navItems";
+import LayoutWrapper from "@/components/LayoutWrapper";
 
 export default () => {
   return (

@@ -1,11 +1,22 @@
 import WujieReact from "wujie-react";
+import lifecycles from "@/utils/lifecycle.js";
+import iframeConfig from "@/utils/iframeConfig.js";
+import { useNavigate } from "react-router";
 
 export default () => {
+  const navigate = useNavigate();
+  function jump(location) {
+    navigate(location.path);
+  }
   return (
     <div>
-      <span>react-v19 - Sub Application</span>
+      <span>react: v19.0.0</span>
       <div>
-        <WujieReact name="react-v19" sync={true} url="http://localhost:5000" />
+        <WujieReact
+          {...iframeConfig["react19"]}
+          {...lifecycles}
+          props={{ jump }}
+        />
       </div>
     </div>
   );

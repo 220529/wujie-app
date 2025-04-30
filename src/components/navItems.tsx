@@ -16,14 +16,14 @@ export const navItems = [
     component: <Home />,
   },
   {
-    path: "/react-v19",
-    label: "react-v19",
+    path: "/react19",
+    label: "react19",
     icon: <MailOutlined />,
     component: <React19 />,
   },
   {
-    path: "/vue-v3",
-    label: "vue-v3",
+    path: "/vue3",
+    label: "vue3",
     icon: <AppstoreOutlined />,
     component: <Vue3 />,
   },
